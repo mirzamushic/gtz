@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 
 </head>
-<body>
+<body window.onload="init();">
   <div class="wrapper">
     <div id="latest">
       <div class="fl_left"><a href="#"><img src="images/cover1.jpg" alt="" /></a></div>
@@ -46,6 +46,30 @@
       <br class="clear" />
     </div>
   </div>
+  <!------------------------------------------------CAROUSEL------------------------------------------------>
+<div class="wrapper" >
+  <div class="containercarousel" onload="init();">
+      <div class="slider_wrapper">
+        <ul id="image_slider">
+          <li><img id="panorama1"src="images/mapazivinice3.jpg"></li>
+          <li><img id="panorama2"src="images/panorama.jpg"></li>
+          <li><img id="panorama3"src="images/panorama5.jpg"></li>
+          <li><img id="panorama4"src="images/panorama6.jpg"></li>
+          <li><img id="panorama5"src="images/panorama2.jpg"></li>
+          <li><img id="panorama6"src="images/panorama7.jpg"></li>
+        </ul>         
+        <span class="nvgt" id="prev" ></span>
+        <span class="nvgt" id="next"></span>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
   <div class="wrapper">
     <div id="container">
 
@@ -119,6 +143,9 @@
     </div>
   </div>
 </div>
-<script src="js/ajaxscript.js" type="text/javascript" ></script>
+<script src="js/treedropdown.js" type="text/javascript"></script>
+<script src="js/carousel.js" type ="text/javascript"></script>
+<script src="js/imagezoom.js" type ="text/javascript"></script>
+<script src="js/localstorage.js" type="text/javascript"></script>
 </body>
 </html>
