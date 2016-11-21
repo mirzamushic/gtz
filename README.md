@@ -91,7 +91,10 @@ Informativni website sa korisnim sadržajem za turiste
     - 
     
 3) Potrebno doraditi (bugovi/nepravilnosti):
-    -
+
+    - Prilikom početnog loada stranice ili reloada podstranice "Početna" carousel radi, ali prilikom prebacivanja na neku drugu 
+    
+    podstranicu pa ponovnog vraćanja na Početnu, carousel ne radi
    
 4)   -
 
