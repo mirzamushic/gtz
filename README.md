@@ -5,7 +5,7 @@ Mirza Mušić (16841)
 Informativni website sa korisnim sadržajem za turiste
 
 
-
+/****************************************SPIRALA_1***************************************************************/
 
 1) Urađeno je:
 
@@ -70,3 +70,36 @@ Informativni website sa korisnim sadržajem za turiste
      * gtz/skice/SkiceMobile/PrijevozMobile - Skica podstranice 'Prijevoz'
      * gtz/skice/SkiceMobile/SmjestajMobile - Skica podstranice 'Smjestaj'
          
+
+/****************************************SPIRALA_2***************************************************************/
+1) Urađeno je:
+
+   * Sve forme na podstranici "Kontakt" imaju implementiranu javascript validaciju
+     Poruke o pravilnom/nepravilnom unosu su predstavljene vizuelno, checkmark i wrongmark ikonama pri čemu je dugme za 
+     slanje pitanja/prijedloga/nepravilnosti onemogućeno ukoliko podaci nisu zadovoljili proces validacije
+   * Dropdown meni je urađen na tabovima "Smještaj" i "Prijevoz" pri čemu je meni u vidu stabla urađen na tabu "Smještaj"
+   * Carousel je urađen na podstranici "Početna" u donjem dijelu
+   * Galerija slika je implementirana u carousel i klikom na bilo koju od slika, slika se zumira i na Esc se vrati u početno stanje
+   * Local storage je korišten na prvoj formi na podstranici "Kontakt" gdje se snimaju podaci (ime, prezime, email) i prilikom ponovnog
+   klika na podstranicu "Kontakt" u alert prozoru se zadnje upisani podaci ispisuju
+   * AJAX je iskorišten kako bi se učitavale podstranice bez reloada cijele stranice
+   
+   
+2) Šta nije urađeno: 
+    - 
+    
+3) Potrebno doraditi (bugovi/nepravilnosti):
+    -
+   
+4)   -
+
+5)  Lista dodatnih foldera/fajlova:
+    * gtz/ajax - folder u kojima su .html dokumenti podstranica koje se učitavaju koristeći AJAX
+    * gtz/js/ajaxscript.js - javascript fajl sa funkcijama koje omogućavaju funkcionalnost AJAX-a na web stranici
+    * gtz/js/carousel.js - javascript za carousel sa slikama
+    * gtz/js/imagezoom.js - javascript za uvećavanje i umanjivanje slika unutar carousel-a 
+    * gtz/js/localstorage.js - javascript za local storage funkcionalnost
+    * gtz/js/treedropdown.js - javascript za tree dropdown implementiran na tabu 'Smještaj'
+    * gtz/js/validacija.js - javascript za validiranje svih formi unutar podstranice "Kontakt"
+    
+
