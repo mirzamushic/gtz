@@ -96,6 +96,7 @@ Informativni website sa korisnim sadržajem za turiste
 4)   -
 
 5)  Lista dodatnih foldera/fajlova:
+
     * gtz/ajax - folder u kojima su .html dokumenti podstranica koje se učitavaju koristeći AJAX
     
     * gtz/js/ajaxscript.js - javascript fajl sa funkcijama koje omogućavaju funkcionalnost AJAX-a na web stranici
