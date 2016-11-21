@@ -19,7 +19,7 @@ a{outline:none; text-decoration:none;}
 
 .fl_left, .imgl{float:left;}
 .fl_right, .imgr{float:right;}
-
+#checkmarkemail2{display:inline-block; margin-top:5px;}
 img{display:block; margin:0; padding:0; border:0;}
 .imgl, .imgr{border:1px solid #999999; padding:5px;}
 .imgl{margin:0 8px 8px 0; clear:left;}
@@ -107,6 +107,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
   box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
   text-shadow: 2px 2px 3px #FFFFFF;
 }
+
 #menu-bar ul li:hover a, #menu-bar li:hover li a {
   background: none;
   border: none;
@@ -115,6 +116,240 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
+/* ----------------------- DROPDOWN TREE HOTELI ------------------------ */
+#sidenavhoteli{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position:  absolute;
+    z-index: 1;
+    padding:10px;
+    background-color : #EBEBEB;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    color: #737373;
+    overflow-x: hidden;
+    transition: 0.01s;
+    padding-top: 5px;
+    margin-left:150px;
+    background: linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -ms-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+  background: -moz-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  border: solid 1px #B4B4B4;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px #222222;
+  -moz-box-shadow: 2px 2px 3px #222222;
+  box-shadow: 2px 2px 3px #222222;
+  overflow:hidden;
+}
+#sidenavhoteli a{
+    width:185px;
+    height:12px;
+     margin-left:170px;
+     padding: 0px;
+     margin-top:10px;
+     overflow:hidden;
+}
+#sidenavhoteli a:hover{
+  background: #E0FFFF !important;
+    background: linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    background: -ms-linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0FFFF), to(#E0FFFF)) !important;
+    background: -moz-linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    color: #6E6E6E !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    text-shadow: 2px 2px 3px #FFFFFF;
+    padding-left:5px;
+    overflow:hidden;
+}
+
+/********************************DROPDOWNTREE-MOTELI ****************************************/
+#sidenavmoteli{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position:  absolute;
+    z-index: 1;
+    padding:10px;
+    background-color : #EBEBEB;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    color: #737373;
+    overflow-x: hidden;
+    transition: 0.01s;
+    padding-top: 5px;
+    margin-left:150px;
+    background: linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -ms-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+  background: -moz-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  border: solid 1px #B4B4B4;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px #222222;
+  -moz-box-shadow: 2px 2px 3px #222222;
+  box-shadow: 2px 2px 3px #222222;
+  overflow:hidden;
+}
+#sidenavmoteli a{
+    width:185px;
+    height:12px;
+     margin-left:170px;
+     padding: 0px;
+     margin-top:10px;
+     overflow:hidden;
+}
+#sidenavmoteli a:hover{
+  background: #E0FFFF !important;
+    background: linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    background: -ms-linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E0FFFF), to(#E0FFFF)) !important;
+    background: -moz-linear-gradient(top, #E0FFFF, #E0FFFF) !important;
+    color: #6E6E6E !important;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    text-shadow: 2px 2px 3px #FFFFFF;
+    padding-left:5px;
+    overflow:hidden;
+}
+/************************************************PRIJEVOZDROPDOWN************************************/
+#prijevozlist{
+  visibility: hidden;
+}
+
+/************************************************CAROUSEL*********************************************/
+.containercarousel{
+  display:block; position:relative; width:960px; margin:0 auto;
+  border:1px solid gray;
+  background: black;  
+}
+.slider_wrapper{
+  overflow: hidden;
+  position:relative;
+  height:350px;
+  top:auto;
+}
+.panorama1 { cursor:zoom-in; }
+.panorama1:-webkit-full-screen { cursor:zoom-out; }
+.panorama1:-moz-full-screen { cursor:zoom-out; }
+.panorama1:-ms-fullscreen { cursor:zoom-out; }
+.panorama1:fullscreen { cursor:zoom-out; }
+
+
+.panorama2 { cursor:zoom-in; }
+.panorama2:-webkit-full-screen { cursor:zoom-out; }
+.panorama2:-moz-full-screen { cursor:zoom-out; }
+.panorama2:-ms-fullscreen { cursor:zoom-out; }
+.panorama2:fullscreen { cursor:zoom-out; }
+
+
+
+.panorama3 { cursor:zoom-in; }
+.panorama3:-webkit-full-screen { cursor:zoom-out; }
+.panorama3:-moz-full-screen { cursor:zoom-out; }
+.panorama3:-ms-fullscreen { cursor:zoom-out; }
+.panorama3:fullscreen { cursor:zoom-out; }
+
+
+.panorama4 { cursor:zoom-in; }
+.panorama4:-webkit-full-screen { cursor:zoom-out; }
+.panorama4:-moz-full-screen { cursor:zoom-out; }
+.panorama4:-ms-fullscreen { cursor:zoom-out; }
+.panorama4:fullscreen { cursor:zoom-out; }
+
+
+
+.panorama5 { cursor:zoom-in; }
+.panorama5:-webkit-full-screen { cursor:zoom-out; }
+.panorama5:-moz-full-screen { cursor:zoom-out; }
+.panorama5:-ms-fullscreen { cursor:zoom-out; }
+.panorama5:fullscreen { cursor:zoom-out; }
+
+
+
+.panorama6 { cursor:zoom-in; }
+.panorama6:-webkit-full-screen { cursor:zoom-out; }
+.panorama6:-moz-full-screen { cursor:zoom-out; }
+.panorama6:-ms-fullscreen { cursor:zoom-out; }
+.panorama6:fullscreen { cursor:zoom-out; }
+
+
+
+#result{
+  visibility: hidden;
+  width:300px;
+  padding-top: 5px;
+  margin: 0 auto;
+    background: linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -ms-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#CFCFCF));
+  background: -moz-linear-gradient(top,  #FFFFFF,  #CFCFCF);
+  border: solid 1px #B4B4B4;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px #222222;
+  -moz-box-shadow: 2px 2px 3px #222222;
+  box-shadow: 2px 2px 3px #222222;
+  overflow:hidden;
+
+}
+
+#result h2{
+  text-align: center;
+}
+
+
+
+
+#image_slider{
+
+  position: relative;
+  height: auto;
+  list-style: none;
+  overflow: hidden;
+  float: left;
+  /*Chrom default padding for ul is 40px */
+  padding:0px;
+  margin:0px;
+}
+#image_slider li{
+  position: relative;
+  float: left;
+}
+.nvgt{
+  position:absolute;
+  top: 150px;
+  height: 50px;
+  width: 30px;
+  opacity: 0.6;
+}
+.nvgt:hover{
+  opacity: 0.9;
+}
+#prev{
+  background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/prev.png') no-repeat center;
+  left: 0px;
+}
+#next{
+  background: #000 url('https://dl.dropboxusercontent.com/u/65639888/image/next.png') no-repeat center;
+  right: 0px;
+}
+
+
+
+
+
+
 #menu-bar ul a:hover {
   background: #E0FFFF !important;
   background: linear-gradient(top,  #E0FFFF,  #E0FFFF) !important;

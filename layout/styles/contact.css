@@ -36,7 +36,11 @@ background:#fff;
 
 }
 #kontakt{text-align: center;}
-
+#checkmark{display:inline-block; margin-top:5px;}
+#checkmarkprezime{display:inline-block; margin-top:5px;}
+#checkmarkemail{display:inline-block; margin-top:5px;}
+#checkmarkemail2{display:inline-block; margin-top:5px;}
+#wrongmark{display:inline-block; margin-top:5px;}
 .iform .itext {
 
 }
@@ -54,7 +58,7 @@ background:#fff;
 
 }
 .iform .ibutton:hover,.iform .ibutton:focus { background:#dadada;}
-.iform li.iheader { display:block; font-size:18px; border-bottom:1px solid #000;  text-indent:10px;  }
+.iform li.iheader { display:block; font-size:18px; border-bottom:1px; margin-bottom: 10px; solid #000;  text-indent:10px;  }
 .iform li.iseparator { display:block; text-indent:-9999px; height:10px; line-height:10px; border-bottom:1px solid #999;margin:5px 0 15px }
 
 .iform .required { border-color:#F00; }
