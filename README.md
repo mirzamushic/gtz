@@ -72,6 +72,8 @@ Informativni website sa korisnim sadržajem za turiste
          
 
 /****************************************SPIRALA_2***************************************************************/
+
+
 1) Urađeno je:
 
    * Sve forme na podstranici "Kontakt" imaju implementiranu javascript validaciju
