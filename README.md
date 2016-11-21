@@ -97,11 +97,17 @@ Informativni website sa korisnim sadržajem za turiste
 
 5)  Lista dodatnih foldera/fajlova:
     * gtz/ajax - folder u kojima su .html dokumenti podstranica koje se učitavaju koristeći AJAX
+    
     * gtz/js/ajaxscript.js - javascript fajl sa funkcijama koje omogućavaju funkcionalnost AJAX-a na web stranici
+    
     * gtz/js/carousel.js - javascript za carousel sa slikama
+    
     * gtz/js/imagezoom.js - javascript za uvećavanje i umanjivanje slika unutar carousel-a 
+    
     * gtz/js/localstorage.js - javascript za local storage funkcionalnost
+    
     * gtz/js/treedropdown.js - javascript za tree dropdown implementiran na tabu 'Smještaj'
+    
     * gtz/js/validacija.js - javascript za validiranje svih formi unutar podstranice "Kontakt"
     
 
