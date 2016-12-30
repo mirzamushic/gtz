@@ -1,0 +1,92 @@
+/* --------------------------------------  MobileResponsive-----------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 590px){
+	/* ----------------------------------------------Wrapper------------------------------------- */
+
+div.wrapper{text-align:center;display:block; width:100%; margin:0; padding:0; text-align:left;}
+div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{margin:0; text-align:center;padding:0 0 8px 0; font-size:16px; font-weight:normal; font-family:Georgia, "Times New Roman", Times, serif; border-bottom:0px dotted #4C4C4C;}
+/* ---------------------------------------------Header----------------------------------------*/
+  #grbheader{width:100%; height:100%; }
+  #header{display:block; position:relative; width:100%; margin:0 auto; margin-top:20px; padding:5px 20px 15px 20px; color:#DBDBDB; background-color:#e0ffff  ; font-family:Georgia, "Times New Roman", Times, serif;}
+  #header #logo{display:block; float:left; width:10%; margin-top:7px;}
+  #header #logo h1, #header #logo p{margin:0; text-align:center;padding:0; line-height:normal;}
+  #header #logo h1{margin:0; padding:0; font-size:42px; border:none; text-align:center; text-transform:uppercase;}
+  #header h1 a{color:#DBDBDB; background-color:#999999; font-size: 35px;text-align:center;}
+  #headerpozdrav h1{text-align:center; margin-right:50px;}
+/*-----------------------------------------------Menubar----------------------------------------*/
+#menu-bar {
+  width: 30%;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom: 0px;
+  padding: 0px 5px 3px 6px;
+  height: 30px;
+  line-height: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 0px;
+  box-shadow: 0px 0px 0px #666666;
+  -webkit-box-shadow: 0px 0px 0px #666666;
+  -moz-box-shadow: 0px 0px 0px #666666;
+  background: #e0ffff;
+  border: solid 0px #6D6D6D;
+  position:relative;
+  z-index:999;
+}
+
+/* ----------------------------------------------Latest------------------------------------- */
+
+#latest{padding:20px 0 0 0; width:40%; text-align: center; margin-left:0px; }
+#latest .fl_left{display:block;  width:100%; }
+#latest .fl_left img{width:300%;float:left;}
+#latest .fl_right{ width:300%; height:auto; text-align: center;padding:10px; color:#333333; background-color:#ffffff;}
+#latest .fl_right h2, #latest .fl_right p{margin:0 0 0px 0; padding:0; border:none; line-height:normal;}
+#latest .fl_right h2{font-size:18px;}
+#latest .fl_right p{line-height:2.2em; font-size: 10px; }
+#latest .fl_right ul{margin:0; padding:0; list-style:none;}
+#latest ul li{display:block;  width:100%; margin:0 15px 0 0; padding:4px; border:1px solid #333333;}
+#latest ul li.last{margin-right:0;}
+
+
+#intro li{width:100%; margin-left:9%;}
+#intro ul{width:100%;}
+#intro h2{width:30%; text-align:center; margin-left:-2%; margin-top:20px;}
+#intro div.imgholder img{width:100%;margin-left:-8%;}
+#intro li p {width:30%; margin-left:-15px;}
+
+/* ----------------------------------------------Intro------------------------------------- */
+
+#intro{padding:25px 0 0px 0; margin-left:70px; }
+#intro ul{ padding:0; list-style:none; text-align:center;float:left; display: inline-block; margin-top:20px;}
+#intro li{display: block; text-align: center; overflow: hidden; float:none;  width:100%; margin-right:auto; margin-left:auto;padding:0;}
+#intro li.last{}
+#intro h2, #intro p, #intro img, #intro div{margin:0 0 20px 0; padding:0;}
+#intro h2{padding-bottom:8px; color:#000000; text-align: center; font-family: verdana sans-serif; background-color:#ffcc00; border: solid 0px #6D6D6D; border-radius: 6px;}
+#intro div.imgholder{display:block; width:30%}
+#intro div.imgholder img{margin:0; padding:0; border:none;}
+#intro p.readmore{margin:0; padding:10px;}
+#intro p.readmore a{padding:5px 15px 5px; margin:10px;font-weight:bold; color:#FDC609; background-color:#1E1E1E;}
+
+/* ----------------------------------------------Content------------------------------------- */
+
+#container{padding:30px 0; line-height:1.4em; color:#525252; background-color:#333;}
+#container a{color:#FDC609; background-color:#131313;}
+#container h1, #container h2, #container h3, #container h4, #container h5, #container h6{margin-top:20px;margin-bottom:20px; color:white;padding-bottom:8px; margin:0px auto; text-align: center; border-bottom:0px dotted #999999;}
+#content{display:block; float:left; width:50%; text-align: center; margin-left:auto; margin-right: auto;}
+.img1 {border:0px solid;}
+/* ----------------------------------------------Content------------------------------------- */
+
+#container{padding:30px 0; line-height:1.4em; color:#525252; background-color:#333; width:100%;}
+#container a{color:#FDC609; background-color:#131313;}
+#container h1, #container h2, #container h3, #container h4, #container h5, #container h6{margin-top:20px;margin-bottom:20px; margin-left:auto; margin-right:auto; text-align: center; margin-right:200px; color:white;padding-bottom:8px; border-bottom:0px dotted #999999;}
+#content{display:block; float:left; width:600px;}
+#column {margin-left:0px;}
+#column #latestnews .imgl{margin-left: 40px;}
+
+
+
+}
