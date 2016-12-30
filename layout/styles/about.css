@@ -1,0 +1,16 @@
+#info{text-align: center; vertical-align: center; margin:200px; margin-top:200px; }
+#info p {margin-left:10px; margin-right:10px;font-size: 15px; text-align: center; padding:0px;  font-style: italic; line-height: 200%;}
+
+/* --------------------------------------  MobileResponsive-----------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 590px){
+
+#info{text-align: center; vertical-align: center; margin:20px; margin-top:200px; }
+#info p {margin-left:10px; margin-right:10px;font-size: 14px; text-align: center; padding:0px;  font-style: italic; line-height: 200%;}
+
+
+}
