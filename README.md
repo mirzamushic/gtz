@@ -115,3 +115,30 @@ Informativni website sa korisnim sadržajem za turiste
     * gtz/js/validacija.js - javascript za validiranje svih formi unutar podstranice "Kontakt"
     
 
+/****************************************SPIRALA_3***************************************************************/
+
+
+1) Urađeno je:
+
+  * login
+  * admin panel
+  * admin mogućnosti
+  * download csv
+   
+2) Šta nije urađeno: 
+    * download pdf
+    * search
+    
+3) Potrebno doraditi (bugovi/nepravilnosti):
+
+   
+4)   -
+
+5)  Lista dodatnih foldera/fajlova:
+  * adminpanel.php - funkcionalnost admin panela
+  * adminpanel.css - izgled admin panela
+  * login.php - login izgled i funkcionalnosti
+  * postavljenapitanja.xml - moguce je unijeti pitanje u prvoj formi na Kontakt tabu i registruju se u ovaj xml
+  * prikazkorisnika.php - nakon klika u admin panelu na Prikaz korisnika, koristi se ovaj fajl
+  
+  
