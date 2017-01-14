@@ -142,3 +142,20 @@ Informativni website sa korisnim sadržajem za turiste
   * prikazkorisnika.php - nakon klika u admin panelu na Prikaz korisnika, koristi se ovaj fajl
   
   
+  
+  /*************************************SPIRALA_4************************************************************/
+  
+  1) Napravljena je baza 'gtz' sa tri tabele: pitanja, prijedlozi, nepravilnosti koje su povezane preko polja 'email'
+  2) Svi korisnici koji su sačuvani u korisnici.xml prilikom dodavanja preko admin panela su prebačeni u bazu u tabelu 'korisnici'
+  3) Sve metode u adminpanel.php koje su upisivale/brisale/modifikovale .xml fajlove, su izmijenjene kako bi se manipulisalo bazom    podataka
+  4) Openshift link na website: http://gtz-php-gradska-turisticka-zajednica.44fs.preview.openshiftapps.com/
+     Openshift phpmyadmin: http://mysql-gradska-turisticka-zajednica.44fs.preview.openshiftapps.com/phpmyadmin
+  5) REST metoda se nalazi u fajlu restmetoda.php
+  6) SS-ovi korištenja POSTMAN-a za testiranje GET requesta se nalaze u folderu postmanprimjeri
+  
+  * Login za admina -> Korisničko ime: admin      Lozinka: password
+  
+  
+  
+   
+  
