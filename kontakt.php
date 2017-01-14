@@ -255,6 +255,16 @@ return $data;
 <div class="wrapper">
   <form action="" class="iform">
 <ul>
+  <li>
+  <label for="Prezime">* Prezime</label>
+  <input class="itext" type="text" name="Prezime" id="Prezime" onchange="validacijaPrezime()" />
+  <img id="checkmarkprezime" onload="resizeImg(this, 20,20);"></img>
+</li>
+<li>
+  <label for="Prezime">* Prezime</label>
+  <input class="itext" type="text" name="Prezime" id="Prezime" onchange="validacijaPrezime()" />
+  <img id="checkmarkprezime" onload="resizeImg(this, 20,20);"></img>
+</li>
 <li class="iheader">Pošaljite Vaš prijedlog</li>
 <li><label for="Pitanje">* Prijedlog</label><textarea class="itextarea" name="Pitanje2" id="Pitanje"></textarea></li>
 <li class="iseparator">&nbsp;</li>

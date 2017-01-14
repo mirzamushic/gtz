@@ -66,7 +66,8 @@ return $data;
 }
 
   if(isset($_POST['unesikorisnika']))
-{
+{//Dodavanje korisnika u XML fajl
+  /*
   $xml = new DomDocument("1.0", "UTF-8");
   $xml->load ('korisnici.xml');
 
@@ -120,12 +121,58 @@ return $data;
   if($imeTacno == true and $prezimeTacno == true and $emailTacan == true){
   $rootTag->appendChild($infoTag);
   $xml->save('korisnici.xml');
-}
+  }*/
+// Dodavanje korisnika direktno u bazu
+    $baza= new PDO("mysql:dbname=gtz;host=localhost;charset=utf8", "admin", "password");
+    $ime = xss_clean($_POST['Ime']);
+    $prezime =xss_clean($_POST['Prezime']);
+    $email = xss_clean($_POST['Email']);
+
+    //validacija unesenih podataka
+    $imeTacno = false;
+    $prezimeTacno = false;
+    $emailTacan = false;
+    if (empty($ime) or !preg_match("/^[a-zA-Z'-]+$/",$ime))
+    {
+      $errors['ime1'] = "Ime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{
+      $imeTacno = true;
+    }
+    if (empty($prezime) or !preg_match("/^[a-zA-Z'-]+$/",$prezime))
+    {
+      $errors['prezime1'] = "Prezime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{ 
+      $prezimeTacno = true;
+    }
+    if (empty($email) or !validEmail($email))
+    {
+      $errors['email1'] = "Polje za unos emaila ne smije biti prazno ili ste unijeli nepravilan email!";
+    }
+    else{
+      $emailTacan = true;
+    }
+    if($imeTacno == true and $prezimeTacno == true and $emailTacan == true){
+      $xyz = $baza->prepare("INSERT INTO korisnici 
+                              (ime, prezime, email) 
+                              VALUES (:ime, :prezime, :email)");
+      $xyz->bindParam(':ime', $ime);
+      $xyz->bindParam(':prezime', $prezime);
+      $xyz->bindParam(':email', $email);
+      $xyz->execute();
+
+    }
+
+
+
 }
 
 
   if(isset($_POST['brisikorisnika']))
 {
+  /*Brisanje korisnika iz XML-a */
+  /*
   $xml = new DomDocument("1.0", "UTF-8");
   $xml->load ('korisnici.xml');
 
@@ -148,14 +195,46 @@ return $data;
 
   
   $xml->formatoutput = true;
-  $xml->save('korisnici.xml');
+  $xml->save('korisnici.xml');*/
+
+  /*Brisanje korisnika iz baze - spirala4 */
+    $ime = xss_clean($_POST['Ime2']);
+    $prezime =xss_clean($_POST['Prezime2']);
+    
+
+    $imeTacno = false;
+    $prezimeTacno = false;
+    $emailTacan = false;
+    if (empty($ime) or !preg_match("/^[a-zA-Z'-]+$/",$ime))
+    {
+      $errors['ime2'] = "Ime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{
+      $imeTacno = true;
+    }
+    if (empty($prezime) or !preg_match("/^[a-zA-Z'-]+$/",$prezime))
+    {
+      $errors['prezime2'] = "Prezime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{ 
+      $prezimeTacno = true;
+    }
+        if($imeTacno == true and $prezimeTacno == true){
+          $baza= new PDO("mysql:dbname=gtz;host=localhost;charset=utf8", "admin", "password");
+          $upit = $baza->prepare("DELETE  FROM korisnici WHERE ime=? and prezime=?");
+          $upit->bindValue(1, $ime, PDO::PARAM_STR);
+          $upit->bindValue(2,$prezime,PDO::PARAM_STR);
+          $upit->execute();
+        }
+
 
 }
 
 
 
 if(isset($_POST['promijenikorisnika']))
-{
+{ /*Promjena u XML doc */
+  /*
 $xml = new DomDocument("1.0", "UTF-8");
 $xml->load ('korisnici.xml');
 $xpath = new DOMXPATH($xml);
@@ -187,6 +266,66 @@ $stariemail = $_POST["Email3"];
   $rootTag->appendChild($infoTag);
   $xml->formatoutput = true;
   $xml->save('korisnici.xml');
+*/
+  /* Izmjena u bazi */
+   $ime = xss_clean($_POST['Ime3']);
+   $prezime =xss_clean($_POST['Prezime3']);
+   $email = xss_clean($_POST['Email3']);
+
+   $novoime = xss_clean($_POST['Novoime']);
+   $novoprezime = xss_clean($_POST['Novoprezime']);
+   $noviemail = xss_clean($_POST['Noviemail']);
+
+   $imeTacno = false;
+   $novoimeTacno = false;
+   $prezimeTacno = false;
+   $novoprezimeTacno = false;
+   $emailTacan = false;
+   $noviemailTacan = false;
+   if (empty($ime) or empty($novoime) or !preg_match("/^[a-zA-Z'-]+$/",$ime)  or !preg_match("/^[a-zA-Z'-]+$/",$ime))
+    {
+      $errors['ime3'] = "Ime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{
+      $imeTacno = true;
+      $novoimeTacno = true;
+    }
+    if (empty($prezime) or !preg_match("/^[a-zA-Z'-]+$/",$prezime) or empty($novoprezime) or !preg_match("/^[a-zA-Z'-]+$/",$novoprezime))
+    {
+      $errors['prezime3'] = "Prezime nije nikako uneseno ili sadrži brojeve!";
+    }
+    else{ 
+      $prezimeTacno = true;
+      $novoprezimeTacno = true;
+    }
+    if (empty($email) or !validEmail($email) or empty($noviemail) or !validEmail($noviemail))
+    {
+      $errors['email3'] = "Polje za unos emaila ne smije biti prazno ili ste unijeli nepravilan email!";
+    }
+    else{
+      $emailTacan = true;
+      $noviemailTacan = true;
+    }
+    if($imeTacno == true and $prezimeTacno == true and $emailTacan == true and $novoimeTacno == true and $novoprezimeTacno == true and $noviemailTacan == true){
+
+        $baza= new PDO("mysql:dbname=gtz;host=localhost;charset=utf8", "admin", "password");
+          $upit = $baza->prepare("DELETE  FROM korisnici WHERE ime=? and prezime=? and email=?");
+          $upit->bindValue(1, $ime, PDO::PARAM_STR);
+          $upit->bindValue(2,$prezime,PDO::PARAM_STR);
+          $upit->bindValue(3,$email,PDO::PARAM_STR);
+          $upit->execute();
+
+        $xyz = $baza->prepare("INSERT INTO korisnici 
+                              (ime, prezime, email) 
+                              VALUES (:ime, :prezime, :email)");
+          $xyz->bindParam(':ime', $novoime);
+          $xyz->bindParam(':prezime', $novoprezime);
+          $xyz->bindParam(':email', $noviemail);
+          $xyz->execute();
+
+
+
+    }
 
 }
 
@@ -206,35 +345,7 @@ echo $xml->email . "<br>";
 
 if(isset($_POST["preuzmicsv"])){
 
-/*$filexml='korisnici.xml';
-
-    if (file_exists($filexml)) 
-           {
-       $xml = simplexml_load_file($filexml);
-       $f = fopen('ispiskorisnika.csv', 'w');
-       createCsv($xml, $f);
-       fclose($f);
-    }
-
-    function createCsv($xml,$f)
-    {
-
-        foreach ($xml->children() as $item) 
-        {
-
-           $hasChild = (count($item->children()) > 0)?true:false;
-
-        if( ! $hasChild)
-        {
-           $put_arr = array($item->getName(),$item); 
-           fputcsv($f, $put_arr ,',','"');
-
-        }
-        else
-        {
-         createCsv($item, $f);
-        }
-     }*/
+/*
      $filexml='korisnici.xml';
 if (file_exists($filexml))  {
 
@@ -278,18 +389,72 @@ if (file_exists($filexml))  {
     readfile($file_url); // do the double-download-dance (dirty but worky)
     exit();
 }
+    */
+    $fp = fopen('izvjestajkorisnici.csv', 'w');
+    $baza= new PDO("mysql:dbname=gtz;host=localhost;charset=utf8", "admin", "password");
+    $sql = 'SELECT ime,prezime,email FROM korisnici ORDER BY ime';
+    foreach ($baza->query($sql) as $row) {
+    $xyz =array($row['ime'],$row['prezime'], $row['email']);
+      fputcsv($fp, $xyz);
+  }
+    fclose($fp);
+    $url = 'http://' . $_SERVER['HTTP_HOST'];          
+    $url .= rtrim(dirname($_SERVER['PHP_SELF']), '/\\'); 
+    $url .= '/izvjestajkorisnici.csv'; 
     
+    $file_url = 'izvjestajkorisnici.csv';
+    header('Content-Type: application/octet-stream');
+    header("Content-Transfer-Encoding: Binary"); 
+    header("Content-disposition: attachment; filename=\"" . basename($file_url) . "\""); 
+    readfile($file_url); // do the double-download-dance (dirty but worky)
+    exit();
+
+}
+
+
+
+
+    if (isset($_POST["xmltodatabase"])){
+        $servername = "localhost";
+        $username = "admin";
+        $password = "password";
+        $dbname = "gtz";
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $files=glob('korisnici.xml');
+            foreach($files as $file){
+              $xml=new SimpleXMLElement($file,0,true);
+              foreach($xml->info as $korisnik){
+              $ime=$korisnik->ime;
+              $prezime=$korisnik->prezime;
+              $email=$korisnik->email;
+              $vecPostojiubazi = "SELECT * FROM korisnici where ime ='$ime' and prezime ='$prezime' ";
+              $result = $conn->query($vecPostojiubazi);
+                    
+                    if ($result->num_rows < 1){
+                    $sqlerror = "INSERT INTO korisnici (ime,prezime,email)
+                    VALUES ('$ime','$prezime','$email')";
+
+                    if (mysqli_query($conn, $sql2)) {
+                        echo "Uspješno prebačen podatak iz XML-a u bazu podataka!";
+                    } else {
+                        echo "Error: " . $sqlerror . "<br>" . mysqli_error($conn);
+                    }
+          }
+        }
+}
+
+
+
+
+
+
     }
-
-
-
-
-
-
-
-
-
-
 ?>
 
 
@@ -335,7 +500,9 @@ if (file_exists($filexml))  {
 <form action="adminpanel.php" method="POST">
     <input type="submit" id="preuzmicsv" name="preuzmicsv" value="Preuzmi CSV" />
 </form>
-
+<form action="adminpanel.php" method="POST">
+    <input type="submit" id="xmltodatabase" name="xmltodatabase" value="Pošalji XML u bazu podataka" />
+</form>
 <!--  Modal Unos -->
 <div id="modalUnos" class="modal">
 
